@@ -47,17 +47,17 @@ Our main goal is to further develop a prediction mutation tool for viral proteom
 
 
 The main steps in our project involve the following:
-  - [ ] _**Step 1 (Test and Evaluate the Current Model)**_
+- [ ] _**Step 1 (Test and Evaluate the Current Model)**_
 - First, test and evaluate the performance of the existing model on Sars-Cov-2.
 - Output performance from this dataset will be used as our benchmark for later comparison with other viral proteomes. The performance metrics which we will use is the  mean sqared error value predictions.
 - We will then retest the tool for other viral proteomes. Here, we will test its performance on Human Papilloma Virus(HPV) and EBV datasets.
 - Comparing the performance metrics of both cases, we will assess how well it performed on the other datassets.
-- Since Sars-Cov-2 was the initial training dataset, we expect prediction outcome of other viral proteomes to be less efficient than that of Sars-Cov-2.
-   - [ ] _**Step 2 (Refine the Model)**_
+- Since Sars-Cov-2 was the initial training dataset, we expect prediction outcome of other viral proteomes to be less efficient than that of Sars-Cov-
+- [ ] _**Step 2 (Refine the Model)**_
 - Comparing results in each occasion to that of the original training dataset, we will try to optimize the performance of the model by either expanding the datapoints/unique variables from which inference of mutation could be made.
 - We hope to achieve this by implementing the 'partial-fit' pipeline from 'scikit-learn'.
 - We will continuously retest performance after its implementation to see for any improvements in prediction.
-   - [ ] _**Step 3(Generalize the Model)**_
+- [ ] _**Step 3(Generalize the Model)**_
 - A challenge with most machine learning and prediction tools is either [overfitting or underfitting](https://www.mdpi.com/2079-9292/13/2/416), and as such optimum performance by any ML model aims at how best to generalize and make it applicable to other datasets.
 - We finally will attempt to generalize the prediction model by testing it on different viral strains. Strains will be selected based on 'closeness' or relatedness to previous data.
 - Overall, we  aim to generalize the tool such that it has optimum or near-optimum prediction capability across different viral proteomes.
