@@ -1,7 +1,5 @@
 # We will be reconstructing/fixing this NCBI Retrieval script to fit our renewed view on the project
 
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Created on Wed Jun 28 13:57:36 2023
 
@@ -30,12 +28,13 @@ import re                                               # module for regular exp
 import pandas as pd                                     # module for building dataframes
 from math import log10, floor                           # module used to output user-specified number of significant figures in output data
 from datetime import date                               # module to pull current dates
-                                   
+# will be looking into some of these imports and modules to fit this into the shift of the project we will be doing                                   
 
 # Define input and output files
 input_file = open('proteinSearch.txt', 'w')             # open and write sequences to proteins text file 
-output_file = "/home/blim/Documents/amino_acids.csv" # path to output file 1 (USER NEEDS TO CHANGE THIS)
+output_file = "/home/blim/Documents/amino_acids.csv" # path to output file 1 (USER NEEDS TO CHANGE THIS) 
 output_file2 = "/home/blim/Documents/prot_freq.csv" # path to output file 2 (USER NEEDS TO CHANGE THIS)
+# Can possibly make this part dynamic with the location where the scripts are
 
 # Protein Sequence Retrieval from NCBI based on search term
 Entrez.email = input("Enter email: ")                   # user prompted to enter email (tell NCBI who you are to access sequences)
