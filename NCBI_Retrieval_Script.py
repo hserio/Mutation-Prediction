@@ -26,14 +26,25 @@ import seaborn as sns                                   # module for visualizati
 import scipy.stats                                      # module to conduct statistical tests
 import re                                               # module for regular expression matching operations
 import pandas as pd                                     # module for building dataframes
+import argparse # module for avoiding hard coded paths
 from math import log10, floor                           # module used to output user-specified number of significant figures in output data
 from datetime import date                               # module to pull current dates
 # will be looking into some of these imports and modules to fit this into the shift of the project we will be doing                                   
 
-# Define input and output files
+def check_arg(args=None):
+     parser = argparse.ArgumentParser(description='Write pattern count given pattern and text')
+     parser.add_argument('-o', '--output',
+                         help='output file name',
+                         required=True
+                         )
+     return parser.parse_args(args)
+
+#retrieve command line arguments and assign to variables
+args = check_arg(sys.argv[1:])
+outfile = args.output #output file that will contain sequences
+
+# Create input file
 input_file = open('proteinSearch.txt', 'w')             # open and write sequences to proteins text file 
-output_file = "/home/blim/Documents/amino_acids.csv" # path to output file 1 (USER NEEDS TO CHANGE THIS) 
-output_file2 = "/home/blim/Documents/prot_freq.csv" # path to output file 2 (USER NEEDS TO CHANGE THIS)
 # Can possibly make this part dynamic with the location where the scripts are
 
 # Protein Sequence Retrieval from NCBI based on search term
@@ -67,6 +78,7 @@ input_file = open('proteinSearch.txt', 'w')             # input file created in 
 input_file.write(record.rstrip('\n'))                   # each fasta format protein sequence is stripped of the new line character
 input_file.close()                                      # close the input file containing the fasta format protein sequences
 
+
 input_file = open('proteinSearch.txt', 'r')             # reopen input file but in read format
 protein_ids = []                                        # make a list of protein IDs
 
@@ -81,6 +93,13 @@ def extract_amino_acids(input_file):
         amino_acids.append(aa_percentages)              # each amino acid percentage appended to list of amino acid percentages
     return amino_acids                                  # list of amino acid percentages returned
 
+# Extract amino acid sequences from input file
+#amino_acids = extract_amino_acids(input_file)           # amino acids functions as a list of dictionaries of the amino acids and corresponding frequencies for each protein (each protein has its own dictionary of amino acid frequencies)
+#input_file.close()                                      # close the input file
+
+#write output to output file
+with open(outfile, 'w') as o:
+    o.write(str(matrix) + '\n')
 ''' 
 # Define function to write amino acid frequencies and min/max percentages to a CSV file
 def write_csv(output_file, data):                     
