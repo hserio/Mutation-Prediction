@@ -61,6 +61,7 @@ The main steps in our project involve the following:
 - A challenge with most machine learning and prediction tools is either [overfitting or underfitting](https://www.mdpi.com/2079-9292/13/2/416), and as such optimum performance by any ML model aims at how best to generalize and make it applicable to other datasets.
 - We finally will attempt to generalize the prediction model by testing it on different viral strains. Strains will be selected based on 'closeness' or relatedness to previous data.
 - Overall, we  aim to generalize the tool such that it has optimum or near-optimum prediction capability across different viral proteomes.
+
       
 ## Milestones
 | Week | Hannah Serio | Bright Asante | Mariam Ahmed | James Damaso |
@@ -74,7 +75,10 @@ The main steps in our project involve the following:
 | April 22 (Final Pres 4/22 & 4/24) | Finalize presentation, develop App Notes | Finalize presentation, develop App Notes | Finalize presentation, develop App Notes | Finalize presentation, develop App Notes |
 | April 29 (Final Code & App Note 5/1) | Finalize App Notes and Readme | Finalize App Notes and Readme | Finalize App Notes and Readme | Finalize App Notes and Readme |
 
+## Progress Update (with the extraction script)
+- We realized that running our updated sequence extraction script always returned a slightly smaller result when compared to the result from a manual search. For instance, after updating and testing to extract 1000 unique protein sequences of sars-cov-2 variants within NCBI's default start date and 2024/04/08, date format YYYY/MM/DD, only 960 unique variants  were extracted. However, on performing a manual search with the same terms in NCBI's database to validate the result, there were 961. The same happened when tested for unique sequences for ebola virus.
 
 ## References
 
 1. Scikit Learn (https://scikit-learn.org/stable/)
+2. [Computational Analysis Predicts Correlations Among Amino Acids in SARS-CoV-2 Proteomes](https://www.mdpi.com/2227-9059/11/2/512)
