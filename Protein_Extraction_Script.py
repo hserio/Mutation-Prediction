@@ -5,16 +5,17 @@ from Bio import Entrez
 
 def check_args(args=None):
     parser = argparse.ArgumentParser(description='Retrieve protein sequences for a virus from NCBI')
+    # Virus Name or Identifier
     parser.add_argument('-v', '--virus',
-                        help='Virus name or identifier',
                         required=True)
+    # Output directory for protein files
     parser.add_argument('-o', '--output',
-                        help='Output directory for protein files',
                         required=True)
     return parser.parse_args(args)
 
 def fetch_proteins(virus, output_directory):
-    Entrez.email = "your@email.com"  # Put your email here
+    # Put your email here, will be changing this to function like the NCBI retrieve script
+    Entrez.email = "your@email.com"  
     search_term = f"{virus} [ORGANISM]"
     handle = Entrez.esearch(db="protein", term=search_term, retmax=10)
     search_result = Entrez.read(handle)
