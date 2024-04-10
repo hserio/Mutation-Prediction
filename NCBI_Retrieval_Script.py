@@ -8,11 +8,6 @@ Created on Wed Jun 28 13:57:36 2023
 
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Jun 28 13:49:58 2023
-
-@author: oprincewell
-"""
 
 # Import necessary packages
 import sys                                              # module contains methods and variables for modifying Python's runtime environment
@@ -67,6 +62,7 @@ if dateY_N == "Y" or "y" and dateY_N != "N" and dateY_N != "n": # if the user en
     startDate == input("Using format YYYY/MM/DD, enter start date: ") # user prompted to enter start date
     endDate == input("Using format YYYY/MM/DD, enter end date: ") # user prompted to enter end date
     
+    
 searchResultHandle = Entrez.esearch(db = "protein", term = protTerm, retmax = numSeqs, idtype = "protein", datetype = "pdat", mindate = startDate, maxdate = endDate) # entrez search handle with user-specified options
 searchResult = Entrez.read(searchResultHandle)          # read in handle with parameters set to user inputs 
 ids = searchResult["IdList"]                            # list of IDs created from protein sequences retrieved
@@ -100,8 +96,9 @@ def extract_amino_acids(input_file):
 #write output to output file
 with open(outfile, 'w') as o:
     o.write(str(matrix) + '\n')
-''' 
+
 # Define function to write amino acid frequencies and min/max percentages to a CSV file
+
 def write_csv(output_file, data):                     
     with open(output_file, "w", newline="") as csvfile: # open new output file as a CSV file
         writer = csv.writer(csvfile)                    # use writer function to write outputs to the CSV file
@@ -169,4 +166,3 @@ plt.text(-0.6, min_percent-0.005, f"Min: {min_percent:.2%}") # displays minimum 
 plt.text(19.2, max_percent-0.005, f"Max: {max_percent:.2%}") # displays maximum average amino acid frequency
 plt.show()                                             # display plot to screen
 
-'''
