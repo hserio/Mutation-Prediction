@@ -164,5 +164,6 @@ plt.xlabel("Amino Acid")                               # barplot x-axis
 plt.ylabel("Frequency")                                # barplot y-axis
 plt.text(-0.6, min_percent-0.005, f"Min: {min_percent:.2%}") # displays minimum average amino acid frequency
 plt.text(19.2, max_percent-0.005, f"Max: {max_percent:.2%}") # displays maximum average amino acid frequency
+plt.savefig("figure.png")                              # save outputfigure in png format
 plt.show()                                             # display plot to screen
 
