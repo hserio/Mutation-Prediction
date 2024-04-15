@@ -15,12 +15,15 @@ import re                                               # module for regular exp
 import pandas as pd                                     # module for building dataframes
 from math import log10, floor                           # module used to output user-specified number of significant figures in output data
 from datetime import date                               # module to pull current dates
+import os
 
 # Create input file
 input_file = open('proteinSearch.txt', 'w')             # open and write sequences to proteins text file 
-# Can possibly make this part dynamic with the location where the scripts are
-output_file = "/home/mhmed17/VMP/amino_acids.csv"  # CHANGE to your own directory
-output_file2 = "/home/mahmed17/VMP/prot_freq.csv"  # change your directory path as well
+
+# Get the current working directory
+current_directory = os.getcwd()
+output_file = current_directory + 'amino_acids.csv'  # CHANGE to your own directory
+output_file2 = current_directory + 'prot_freq.csv' # change your directory path as well
 
 # Protein Sequence Retrieval from NCBI based on search term
 Entrez.email = input("Enter email: ")                   # user prompted to enter email (tell NCBI who you are to access sequences)
