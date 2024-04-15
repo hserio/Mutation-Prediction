@@ -1,11 +1,3 @@
-# We will be reconstructing/fixing this NCBI Retrieval script to fit our renewed view on the project
-
-"""
-Created on Wed Jun 28 13:57:36 2023
-
-@author: blim
-"""
-
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
@@ -27,6 +19,8 @@ from datetime import date                               # module to pull current
 # Create input file
 input_file = open('proteinSearch.txt', 'w')             # open and write sequences to proteins text file 
 # Can possibly make this part dynamic with the location where the scripts are
+output_file = "/home/mhmed17/VMP/amino_acids.csv"  # CHANGE to your own directory
+output_file2 = "/home/mahmed17/VMP/prot_freq.csv"  # change your directory path as well
 
 # Protein Sequence Retrieval from NCBI based on search term
 Entrez.email = input("Enter email: ")                   # user prompted to enter email (tell NCBI who you are to access sequences)
