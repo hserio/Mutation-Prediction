@@ -1,8 +1,13 @@
-
+# This module provides operating system functionality like reading and
+# writing to the file system
 import os
+# This makes it easy to write user-friendly command-line interfaces 
+# It parses command-line arguments and options
 import argparse
+# This allows for the use of the Biopython library while also allowing for NCBI access
 from Bio import Entrez
 
+# This defined function allows for command-line arguments 
 def check_args(args=None):
     parser = argparse.ArgumentParser(description='Retrieve protein sequences for a virus from NCBI')
     # Virus Name or Identifier
