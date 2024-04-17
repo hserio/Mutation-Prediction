@@ -139,6 +139,24 @@ plt.xlabel("Amino Acid")                               # barplot x-axis
 plt.ylabel("Frequency")                                # barplot y-axis
 plt.text(-0.6, min_percent-0.005, f"Min: {min_percent:.2%}") # displays minimum average amino acid frequency
 plt.text(19.2, max_percent-0.005, f"Max: {max_percent:.2%}") # displays maximum average amino acid frequency
-plt.savefig("figure.png")                              # save outputfigure in png format
+plt.savefig("frequency.png")                              # save outputfigure in png format
 plt.show()                                             # display plot to screen
 
+# Calculate total counts of each amino acid
+total_aa_counts = {}  # create a dictionary to store absolute counts of each amino acid
+for aa in amino_acids:  # iterate through each set of amino acid counts (one dictionary per protein) in the list of amino acid counts for the individual proteins
+    for k, v in aa.items():  # within each dictionary, k functions as the amino acid, while v functions as its corresponding count
+        if k in total_aa_counts:  # for each amino acid, its corresponding count is added to total_aa_counts
+            total_aa_counts[k] += v
+        else:  # if the amino acid is not present in total_aa_counts, its initial count is set
+            total_aa_counts[k] = v
+
+# Plot amino acid composition using seaborn
+sns.set_style("whitegrid")                            
+plt.figure(figsize=(10, 6))
+sns.barplot(x=list(total_aa_counts.keys()), y=list(total_aa_counts.values()), palette="Blues")
+plt.title("Amino Acid Composition")                    # barplot title
+plt.xlabel("Amino Acid")                               # barplot x-axis
+plt.ylabel("Absolute Counts")                                # barplot y-axis
+plt.savefig("composition.png")                              # save outputfigure in png format
+plt.show()                                             # display plot to screen
