@@ -22,8 +22,8 @@ input_file = open('proteinSearch.txt', 'w')             # open and write sequenc
 
 # Get the current working directory
 current_directory = os.getcwd()
-output_file = current_directory + 'amino_acids.csv'  # CHANGE to your own directory
-output_file2 = current_directory + 'prot_freq.csv' # change your directory path as well
+output_file = current_directory + '/amino_acids.csv'  # CHANGE to your own directory
+output_file2 = current_directory + '/prot_freq.csv' # change your directory path as well
 
 # Protein Sequence Retrieval from NCBI based on search term
 Entrez.email = input("Enter email: ")                   # user prompted to enter email (tell NCBI who you are to access sequences)
@@ -142,3 +142,4 @@ plt.text(19.2, max_percent-0.005, f"Max: {max_percent:.2%}") # displays maximum 
 plt.savefig("figure.png")                              # save outputfigure in png format
 plt.show()                                             # display plot to screen
 
+### Running through lines 134 to 143 (to plot the amino acid frequencies) display a warning in the terminal ''' UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown''' but the plot gets saved as a .png file to your current directory.#
