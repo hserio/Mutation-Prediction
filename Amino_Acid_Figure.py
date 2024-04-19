@@ -198,23 +198,6 @@ plt.text(19.2, max_percent-0.005, f"Max: {max_percent:.2%}") # displays maximum 
 plt.savefig("frequency_HPV18.png")                              # save outputfigure in png format
 plt.show()                                             # display plot to screen
 
-# Plot all differing amino acid frequencies using seaborn
-#sns.set_style("whitegrid")                            
-#plt.figure(figsize=(10, 6))
-# Plot average amino acid frequences
-#sns.barplot(x=list(total_aa_freqs.keys()), y=list(total_aa_freqs.values()), color="grey", alpha=0.7, label='Average HPV Amino Acid Frequencies')
-# Plot subtracted HPV18 amino acid frequences
-#sns.barplot(x=list(HPV_18_subtract.keys()), y=list(HPV_18_subtract.values()), color="green", alpha=0.7, label='HPV18 Amino Acid Frequencies')
-# Plot subtracted HPV16 amino acid frequences
-#sns.barplot(x=list(HPV_16_subtract.keys()), y=list(HPV_16_subtract.values()), color="blue", alpha=0.7, label='HPV16 Amino Acid Frequencies')
-#plt.title("Amino Acid Frequencies")                    # barplot title
-#plt.xlabel("Amino Acid")                               # barplot x-axis
-#plt.ylabel("Frequency")                                # barplot y-axis
-#plt.text(-0.6, min_percent-0.005, f"Min: {min_percent:.2%}") # displays minimum average amino acid frequency
-#plt.text(19.2, max_percent-0.005, f"Max: {max_percent:.2%}") # displays maximum average amino acid frequency
-#plt.savefig("all_frequencies.png")                              # save outputfigure in png format
-#plt.show()                                             # display plot to screen
-
 # Get the amino acids as x-axis labels
 x_labels = list(total_aa_freqs.keys())
 # Width of each bar in bar graph
