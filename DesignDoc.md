@@ -73,12 +73,27 @@ The main steps in our project involve the following:
 | April 8 (Repo Check #2 4/10) | Generate graphic with AA composition and create rough draft of App Note | Finalize code and create rough draft of App Note | Finalize code and create rough draft of App Note | Generate graphic with AA composition and create rough draft of App Note |
 | April 15 (Rough Draft App Note 4/17) | Prepare final presentation and App Note | Prepare final presentation and App Note | Prepare final presentation and App Note | Prepare final presentation and App Note |
 | April 22 (Final Pres 4/22 & 4/24) | Finalize presentation, develop App Notes | Finalize presentation, develop App Notes | Finalize presentation, develop App Notes | Finalize presentation, develop App Notes |
+
 | April 29 (Final Code & App Note 5/1) | Finalize App Notes and Readme | Finalize App Notes and Readme | Finalize App Notes and Readme | Finalize App Notes and Readme |
 
-## Progress Update (with the extraction script)
+## Progress Update
 - We realized that running our updated sequence extraction script always returned a slightly smaller result when compared to the result from a manual search. For instance, after updating and testing to extract 1000 unique protein sequences of sars-cov-2 variants within NCBI's default start date and 2024/04/08, date format YYYY/MM/DD, only 960 unique variants  were extracted. However, on performing a manual search with the same terms in NCBI's database to validate the result, there were 961. The same happened when tested for unique sequences for ebola virus.
+- We have extracted and visualized the amino acid composition and frequencies for three viruses; Sars-CoV-2, EBV, and HPV.
+
+##
+- ![hpv](https://github.com/hserio/Mutation-Prediction/assets/57806377/6f4d0426-d10e-404b-9f95-cd16243d6cce)
+- Amino Acid Frequencies across 1000 protein sequences of Human papilloma virus (HPV)
+
+##
+- ![ebv](https://github.com/hserio/Mutation-Prediction/assets/57806377/29e26187-82e8-420f-8e91-a09745074c39)
+Amino Acid Frequencies across 1000 protein sequences of Ebola virus (EBV)
+
+##
+- ![Cov](https://github.com/hserio/Mutation-Prediction/assets/57806377/8ddb00bb-0015-4325-a2e9-2cb7b2893d07)
+       Amino Acid Frequencies across 1000 protein sequences of Sars-CoV-2 virus
 
 ## References
+
 
 1. Scikit Learn (https://scikit-learn.org/stable/)
 2. [Computational Analysis Predicts Correlations Among Amino Acids in SARS-CoV-2 Proteomes](https://www.mdpi.com/2227-9059/11/2/512)
