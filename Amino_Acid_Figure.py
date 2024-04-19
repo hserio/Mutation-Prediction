@@ -157,7 +157,7 @@ def calculate_aa_freq(sequence):
             all_freqs[aa] = 1 # initialize amino acid if this is the first occurance of it
         total_aa_count += 1
     for k, v in all_freqs.items(): # for loop iterates through each amino acid and corresponding frequency in all_freqs
-        all_freqs[k] = round((v/int(numSeqs)),sig-int(floor(log10(abs(v/int(numSeqs)))))-1) # each frequency is rounded to the number of significant figures
+        all_freqs[k] = round((v/int(total_aa_count)),sig-int(floor(log10(abs(v/int(total_aa_count)))))-1) # each frequency is rounded to the number of significant figures
     return all_freqs
 
 HPV16_freq = calculate_aa_freq(HPV_16) # calculate aa frequency for hpv16 variant
@@ -167,7 +167,7 @@ HPV18_freq = calculate_aa_freq(HPV_18) # calculate aa frequency for hpv18 varian
 def mutation_aa_freq(total_aa_freqs, variant_aa_freqs):
     mut_aa_freqs = {} # initialize variable to store difference in aa frequencies
     for aa, total_freq in total_aa_freqs.items():
-        new_freq = total_freq - variant_aa_freqs.get(aa, 0) # subtracts the amino acid frequency of a variant from the average total frequency (if AA is not found, 0 is used)
+        new_freq = float(total_freq) - float(variant_aa_freqs.get(aa, 0)) # subtracts the amino acid frequency of a variant from the average total frequency (if AA is not found, 0 is used)
         mut_aa_freqs[aa] = new_freq # add each new aa and frequency to the graph
     return mut_aa_freqs
 
@@ -207,8 +207,6 @@ positions = range(len(x_labels))
 # Plotting
 sns.set_style("whitegrid")
 plt.figure(figsize=(10, 6))
-# Plot total amino acid frequencies
-plt.bar(positions, total_aa_freqs.values(), width=bar_width, color="grey", alpha=0.7, label='Average HPV Amino Acid Frequencies')
 # Plot HPV18 amino acid frequencies
 plt.bar([pos + bar_width for pos in positions], HPV_18_subtract.values(), width=bar_width, color="green", alpha=0.7, label='HPV18 Amino Acid Frequencies')
 # Plot HPV16 amino acid frequencies
