@@ -130,19 +130,22 @@ for i in range(len(protein_ids)):                      # for loop iterates throu
 aa_outfile.close()                                     # close the test.out.csv outfile
 protein_outfile.close()                                # close the protein.csv outfile
 
-# Plot amino acid frequencies using seaborn
-sns.set_style("whitegrid")                            
-plt.figure(figsize=(10, 6))
-sns.barplot(x=list(total_aa_freqs.keys()), y=list(total_aa_freqs.values()), palette="Blues")
-plt.title("Amino Acid Frequencies")                    # barplot title
-plt.xlabel("Amino Acid")                               # barplot x-axis
-plt.ylabel("Frequency")                                # barplot y-axis
-plt.text(-0.6, min_percent-0.005, f"Min: {min_percent:.2%}") # displays minimum average amino acid frequency
-plt.text(19.2, max_percent-0.005, f"Max: {max_percent:.2%}") # displays maximum average amino acid frequency
-plt.savefig("frequency.png")                              # save outputfigure in png format
-plt.show()                                             # display plot to screen
+# load the protein frequencies csv file as a dataframe
+df = pd.read_csv("protein.csv")
 
-### Running through lines 134 to 143 (to plot the amino acid frequencies) display a warning in the terminal ''' UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown''' but the plot gets saved as a .png file to your current directory.#
+# convert the dataframe to a long format
+df_long = pd.melt(df, id_vars=['Protein ID'], var_name='Amino Acid', value_name='Frequency')
+
+# create box plot to show distribution of frequencies using seaborn
+plt.figure(figsize=(10, 6))
+sns.boxplot(data=df_long, x='Amino Acid', y='Frequency')
+plt.title('Frequency Distribution of Amino Acids')
+plt.xlabel('Amino Acid')
+plt.ylabel('Frequency')
+plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
+plt.tight_layout()
+plt.savefig("frequency_distribution.png") # save figure
+plt.show()                                       # display plot to screen
 
 # Calculate total counts of each amino acid
 total_aa_counts = {}  # create a dictionary to store absolute counts of each amino acid
