@@ -22,14 +22,14 @@ input_file = open('proteinSearch.txt', 'w')             # open and write sequenc
 
 # Get the current working directory
 current_directory = os.getcwd()
-output_file = current_directory + '/amino_acids.csv'  # CHANGE to your own directory
-output_file2 = current_directory + '/prot_freq.csv' # change your directory path as well
+output_file = current_directory + '/amino_acids.csv'    #creates file in cwd for amino acid output file
+output_file2 = current_directory + '/prot_freq.csv'     #creates output file in cwd for aa frequencies
 
 # Protein Sequence Retrieval from NCBI based on search term
 Entrez.email = input("Enter email: ")                   # user prompted to enter email (tell NCBI who you are to access sequences)
 
-protTerm = input("Enter NCBI search term: ")            # user prompted to enter protein sequence ID
-numSeqs = input("How many protein sequences would you like to extract? ") # user prompted to enter # seqs to retrieve
+protTerm = input("Enter NCBI search term: ")            # user prompted to enter a virus name to start the search
+numSeqs = input("How many protein sequences would you like to extract? ") # user prompted to enter max num of seqs to retrieve from NCBI
 
 print("Default date range for protein sequence extraction is from 01/01/2000 - Current.") 
 print("Would you like to extract protein sequences from a specified date range?") 
@@ -142,9 +142,9 @@ sns.boxplot(data=df_long, x='Amino Acid', y='Frequency')
 plt.title('Frequency Distribution of Amino Acids')
 plt.xlabel('Amino Acid')
 plt.ylabel('Frequency')
-plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
+plt.xticks(rotation=45)                          # Rotate x-axis labels for better readability
 plt.tight_layout()
-plt.savefig("frequency_distribution.png") # save figure
+plt.savefig("frequency_distribution.png")        # save figure
 plt.show()                                       # display plot to screen
 
 # Calculate total counts of each amino acid
