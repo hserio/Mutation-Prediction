@@ -12,8 +12,12 @@ Data Retrieval: Easily downloads from the National Center for Biotechnology Info
 
 **Installation**
 
-To get started, clone the repository and install the required dependencies:
+1) To get started, clone the repository and install the required dependencies:
 
 git clone https://github.com/hserio/Mutation-Prediction.git
 cd mutation-prediction
 pip install seaborn re pandas scipy
+
+2) Run the script
+   python NCBI_Retrieval_Script.py
+   respond to script promt to refine the search
