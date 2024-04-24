@@ -11,7 +11,8 @@ The Viral Mutation Prediction Tool is the starting point for a comprehensive sof
 Data Retrieval: Easily downloads from the National Center for Biotechnology Information (NCBI) to create .csv files and visualise the difference in amino acid frequencies through boxplots 
 
 **Installation**
-	To get started, clone the repository and install the required dependencies:
+
+To get started, clone the repository and install the required dependencies:
 
 git clone https://github.com/hserio/Mutation-Prediction.git
 cd mutation-prediction
