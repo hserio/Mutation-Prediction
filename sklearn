@@ -20,5 +20,7 @@ This method of "external memory" learning technique fits large input data that c
   - Clustering --> sklearn.cluster.MiniBatchKMeans
   - Decomposition (feature extraction) --> sklearn.decomposition.MiniBatchDictionaryLearning
 
-Cattering to the generaliza........................
+Making this pipeline generally more applicable will require a larger dataset that is more represetative of other viruses to train the ML models. 
+We acknowledge the challenges that comes with this decision which is why we propose a possible solution to go about this problem to make it more efficient to process.
+
 Ref: https://scikit-learn.org/0.15/modules/scaling_strategies.html 
