@@ -1,10 +1,10 @@
 **Overview**
 
-Viruses mutate extremely frequently, their mutation rate being higher than any other organism. Their ability to quickly evolve has led to efficient infection of their host, evading antiviral drugs. This characteristic also makes it quite difficult to estimate/quantify how accurate a prediction is to what is, since the spread of a virus, as seen with the spread of Sars-CoV-2. There is an urgent demand for accurate predictive tools for viral mutations to get ahead of any virus and stop the spread before mutation.
+Viruses mutate extremely frequently, their mutation rate being higher than any other organism. Their ability to quickly evolve has led to efficient infection of their host, evading antiviral drugs. This characteristic also makes it quite difficult to estimate mutation prediction, as seen with the spread of Sars-CoV-2. There is an urgent demand for accurate predictive tools for viral mutations to get ahead of any virus and stop the spread before mutation.
 
 **Functionality**
 
-The Viral Mutation Prediction Tool is the starting point for a comprehensive software package to extract, preprocessing, training and mutation prediction from additional viral genomic data, not just from Sars-Cov-2. This toolkit is the starting point, this will have the Python pipeline built for extraction. This will prompt the user in the command line with a query for NCBI in the form of user input for information such as the organism wanted, how many sequences, and if a specified date range is wanted. It will also prompt the user if amino acid frequencies should be preserved and if so, how many significant figures. From this, it will retrieve the number of sequences specified from NCBI, generate .csv files, and create boxplots to view amino acid frequencies. 
+The viral mutation prediction tool is being developed that will first extract protein sequences from NCBI, preprocess the data, and use machine learning models to obtain mutation predictions. This toolkit is the starting point, this will have the Python pipeline built for extraction. This will prompt the user in the command line with a query for NCBI in the form of user input for information such as the organism wanted, how many sequences should be extracted, and if a specified date range is desired. It will also prompt the user how many significant figures should be preserved for amino acid frequencies. From this, it will retrieve the number of sequences specified from NCBI, generate .csv files, and create plots to view amino acid frequencies. 
 
 **Features**
 
@@ -53,6 +53,9 @@ protein_Search.txt
 
 amino_acids.csv
 - A csv file ranking the average amino acid frequency from all extracted sequences.
+
+composition.png
+- A figure displaying the total counts of each amino acid residue for all extracted sequences.
 
 **Additional Information**
 
