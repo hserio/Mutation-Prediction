@@ -16,7 +16,7 @@ Data Retrieval: Easily downloads from the National Center for Biotechnology Info
 
          git clone https://github.com/hserio/Mutation-Prediction.git
 
-         cd mutation-prediction
+         cd Mutation-Prediction
 
          pip install seaborn re pandas scipy
 
@@ -39,3 +39,14 @@ Prompts will include user email, NCBI Search Term (Ex: SARS COVID19), number of 
          Would you like to extract protein sequences from a specified date range?
          Enter (Y/N): N
          How many significant figures would you like to preserve for amino acid frequencies? 2
+
+**Outputs**
+
+frequency_distribution.png 
+- A figure displaying the frequency distributions for each amino acid residue from the extracted sequences. 
+protein.csv
+- A csv file with the amino acid frequencies per extracted protein sequence.
+protein_Search.txt
+- A text file containing each extracted protein sequence in fasta format.
+amino_acids.csv
+- A csv file ranking the average amino acid frequency from all extracted sequences.
