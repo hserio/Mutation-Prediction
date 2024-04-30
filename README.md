@@ -26,6 +26,6 @@ After cloning the repository and installing any required dependencies, follow th
 
 1) Running the Data Retrieval program (Respond to the script prompts to refine the desired search)
 
-   python NCBI_Retrieval_Script.py
+python NCBI_Retrieval_Script.py
    
    Prompts will include user email, NCBI Search Term (Ex: SARS COVID19), number of protein sequences to be extracted, a desired date range and how many signifigant figures are to be preserved for amino acid frequencies
