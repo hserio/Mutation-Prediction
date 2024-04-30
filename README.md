@@ -44,9 +44,12 @@ Prompts will include user email, NCBI Search Term (Ex: SARS COVID19), number of 
 
 frequency_distribution.png 
 - A figure displaying the frequency distributions for each amino acid residue from the extracted sequences. 
+
 protein.csv
 - A csv file with the amino acid frequencies per extracted protein sequence.
+
 protein_Search.txt
 - A text file containing each extracted protein sequence in fasta format.
+
 amino_acids.csv
 - A csv file ranking the average amino acid frequency from all extracted sequences.
