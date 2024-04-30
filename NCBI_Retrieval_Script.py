@@ -15,7 +15,7 @@ import re                                               # module for regular exp
 import pandas as pd                                     # module for building dataframes
 from math import log10, floor                           # module used to output user-specified number of significant figures in output data
 from datetime import date                               # module to pull current dates
-import os
+import os                                               # module to avoid hard coded paths in scripts
 
 # Create input file
 input_file = open('proteinSearch.txt', 'w')             # open and write sequences to proteins text file 
