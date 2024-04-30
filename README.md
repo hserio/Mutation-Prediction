@@ -14,11 +14,11 @@ Data Retrieval: Easily downloads from the National Center for Biotechnology Info
 
 1) To get started, clone the repository and install the required dependencies:
 
-git clone https://github.com/hserio/Mutation-Prediction.git
+         git clone https://github.com/hserio/Mutation-Prediction.git
 
-cd mutation-prediction
+         cd mutation-prediction
 
-pip install seaborn re pandas scipy
+         pip install seaborn re pandas scipy
 
 **Usage**
 
@@ -26,6 +26,16 @@ After cloning the repository and installing any required dependencies, follow th
 
 1) Running the Data Retrieval program (Respond to the script prompts to refine the desired search)
 
-python NCBI_Retrieval_Script.py
+         python NCBI_Retrieval_Script.py
    
-   Prompts will include user email, NCBI Search Term (Ex: SARS COVID19), number of protein sequences to be extracted, a desired date range and how many signifigant figures are to be preserved for amino acid frequencies
+Prompts will include user email, NCBI Search Term (Ex: SARS COVID19), number of protein sequences to be extracted, a desired date range and how many signifigant figures are to be preserved for amino acid frequencies
+
+**Example**
+
+         Enter Email: ****@email.com
+         Enter NCBI Search Term: SARS COVID19
+         How many protein sequences would you like to extract? 1000
+         Default fate range for protein sequence extraction is from 01/01/2000 - Current.
+         Would you like to extract protein sequences from a specified date range?
+         Enter (Y/N): N
+         How many significant figures would you like to preserve for amino acid frequencies? 2
