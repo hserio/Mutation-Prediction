@@ -53,3 +53,21 @@ protein_Search.txt
 
 amino_acids.csv
 - A csv file ranking the average amino acid frequency from all extracted sequences.
+
+**Additional Information**
+
+Another script, Strain_Mutation_Visualization.py, has been created as a template for future mutation analysis. This script outputs a bar plot (all_frequencies.png) that shows the differences in amino acid composition between a specific strain vs the average amino acid composition for the same virus. Right now it is designed to compare human papillomavirus 16 and 18 to the average amino acid frequencies and can be tested using the code below:
+
+         python Strain_Mutation_Visualization.py
+
+When prompted, enter these terms:
+   
+         Enter Email: ****@email.com
+         Enter NCBI Search Term: Human papillomavirus
+         How many protein sequences would you like to extract? 1000
+         Default fate range for protein sequence extraction is from 01/01/2000 - Current.
+         Would you like to extract protein sequences from a specified date range?
+         Enter (Y/N): N
+         How many significant figures would you like to preserve for amino acid frequencies? 2
+
+We also have a 'sklearn' file in this repository containing information on retraining the machine learning models in order to aid individuals continuing the tools development.
