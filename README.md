@@ -4,7 +4,7 @@ Viruses mutate extremely frequently, their mutation rate being higher than any o
 
 **Functionality**
 
-The Viral Mutation Prediction Tool is the starting point for a comprehensive software package to extract, preprocessing, training and mutation prediction from additional viral genomic data, not just from Sars-Cov-2. This toolkit is the starting point, this will have the Python pipeline build for extraction. This will prompt the user in the command line with a query for NCBI in the form of user-input for information such as the organism wanted, how many sequences, and if a specified date range is wanted. It will also prompt the user if amino acid frequencies should be preserved and if so, how many significant figures. From this, it will retrieve the amount of sequences specified from NCBI, generate .csv files, and create boxplots to view amino acid frequencies. 
+The Viral Mutation Prediction Tool is the starting point for a comprehensive software package to extract, preprocessing, training and mutation prediction from additional viral genomic data, not just from Sars-Cov-2. This toolkit is the starting point, this will have the Python pipeline built for extraction. This will prompt the user in the command line with a query for NCBI in the form of user input for information such as the organism wanted, how many sequences, and if a specified date range is wanted. It will also prompt the user if amino acid frequencies should be preserved and if so, how many significant figures. From this, it will retrieve the number of sequences specified from NCBI, generate .csv files, and create boxplots to view amino acid frequencies. 
 
 **Features**
 
@@ -15,9 +15,17 @@ Data Retrieval: Easily downloads from the National Center for Biotechnology Info
 1) To get started, clone the repository and install the required dependencies:
 
 git clone https://github.com/hserio/Mutation-Prediction.git
+
 cd mutation-prediction
+
 pip install seaborn re pandas scipy
 
-2) Run the script
+**Usage**
+
+After cloning the repository and installing any required dependencies, follow the steps below:
+
+1) Running the Data Retrieval program (Respond to the script prompts to refine the desired search)
+
    python NCBI_Retrieval_Script.py
-   respond to script promt to refine the search
+   
+   Prompts will include user email, NCBI Search Term (Ex: SARS COVID19), number of protein sequences to be extracted, a desired date range and how many signifigant figures are to be preserved for amino acid frequencies
