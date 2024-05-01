@@ -10,6 +10,12 @@ Fullfilling the first step of the ML prediction tool, data extraction, this pipe
 
 Data Retrieval: Easily downloads from the National Center for Biotechnology Information (NCBI) to create .csv files and visualise the difference in amino acid frequencies through boxplots 
 
+**Software Requirements**
+Linux, Python 3.1.2
+
+**Dependencies**
+
+
 **Installation**
 
 1) To get started, clone the repository and install the required dependencies:
