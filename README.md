@@ -29,7 +29,7 @@ Biopython, seaborn, matplotlib, scipy, numpy, sys, csv, re, math, datetime, os
 
 After cloning the repository and installing any required dependencies, follow the steps below:
 
-1) Running the Data Retrieval program (Respond to the script prompts to refine the desired search)
+1) Running the Data Retrieval program (Respond to the script prompts to refine the NCBI search)
 
          python NCBI_Retrieval_Script.py
    
