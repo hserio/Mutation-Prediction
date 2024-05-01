@@ -4,7 +4,7 @@ A virus's ability to generate genetic diversity during replication is a key fact
 
 **Functionality**
 
-Fullfilling the first step of the ML prediction tool, data extraction, this pipeline operates based on minimal user input to generate neccessary files and visuals before processing the data with the ML models. Upon running this python script, the user is prompted to input the virus they are intersted in, the maximum number of records to be extracted, and an optional data range, all of which are used to refine the NCBI search query. It will also prompt the user to input the desired numer of significant figures to preserved the amino acid frequencies later. Then, it will retrieve the number of sequences specified from NCBI, generate .csv files, and create plots to summarize the distribution of the amino acid composition (AAC). 
+Fullfilling the first step of the ML prediction tool, data extraction, this pipeline operates based on minimal user input to generate necessary files and visuals before processing the data with the ML models. Upon running this python script, the user is prompted to input the virus they are intersted in, the maximum number of records to be extracted, and an optional data range, all of which are used to refine the NCBI search query. It will also prompt the user to input the desired numer of significant figures to preserved the amino acid frequencies later. Then, it will retrieve the number of sequences specified from NCBI, generate .csv files, and create plots to summarize the distribution of the amino acid composition (AAC). 
 
 **Features**
 
