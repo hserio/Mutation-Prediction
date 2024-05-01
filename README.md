@@ -1,6 +1,6 @@
 **Overview**
 
-Viruses mutate extremely frequently, their mutation rate being higher than any other organism. Their ability to quickly evolve has led to efficient infection of their host, evading antiviral drugs. This characteristic also makes it quite difficult to estimate mutation prediction, as seen with the spread of SARS-CoV-2. There is an urgent demand for accurate predictive tools for viral mutations to get ahead of any virus and stop the spread before mutation.
+A virus's ability to generate genetic diversity during replication has been a key factor in its effective infection of host cell and ability to grow more drug-resistant strains which ultimately results in its wide spread. The rate of mutation along with other environmental and biological factors also make it quite difficult to predict its mutation patterns as seen with the spread of SARS-CoV-2. Therefore, this pipeline here is part of a greater ML tool that predicts sequence mutations of viral proteomes based on AAC analysis. This pipeline is a command line tool that extracts NCBI records of viral proteins based on user's input, create visuals to summarize AAC distribution, and generate necessary files for further analysis by the ML tool.
 
 **Functionality**
 
