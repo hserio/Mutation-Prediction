@@ -4,7 +4,7 @@ A virus's ability to generate genetic diversity during replication is a key fact
 
 **Functionality**
 
-The viral mutation prediction tool is being developed that will first extract protein sequences from NCBI, preprocess the data, and use machine learning models to obtain mutation predictions. This toolkit is the starting point, this will have the Python pipeline built for extraction. This will prompt the user in the command line with a query for NCBI in the form of user input for information such as the organism wanted, how many sequences should be extracted, and if a specified date range is desired. It will also prompt the user how many significant figures should be preserved for amino acid frequencies. From this, it will retrieve the number of sequences specified from NCBI, generate .csv files, and create plots to view amino acid frequencies. 
+Fullfilling the first step of the ML prediction tool, data extraction, this pipeline operates based on minimal user input to generate neccessary files and visuals before processing the data with the ML models. Upon running this python script, the user is prompted to input the virus they are intersted in, the maximum number of records to be extracted, and an optional data range, all of which are used to refine the NCBI search query. It will also prompt the user to input the desired numer of significant figures to preserved the amino acid frequencies later. Then, it will retrieve the number of sequences specified from NCBI, generate .csv files, and create plots to summarize the distribution of the amino acid composition (AAC). 
 
 **Features**
 
