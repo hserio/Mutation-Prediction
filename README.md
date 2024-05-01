@@ -1,6 +1,6 @@
 **Overview**
 
-Viruses mutate extremely frequently, their mutation rate being higher than any other organism. Their ability to quickly evolve has led to efficient infection of their host, evading antiviral drugs. This characteristic also makes it quite difficult to estimate mutation prediction, as seen with the spread of Sars-CoV-2. There is an urgent demand for accurate predictive tools for viral mutations to get ahead of any virus and stop the spread before mutation.
+Viruses mutate extremely frequently, their mutation rate being higher than any other organism. Their ability to quickly evolve has led to efficient infection of their host, evading antiviral drugs. This characteristic also makes it quite difficult to estimate mutation prediction, as seen with the spread of SARS-CoV-2. There is an urgent demand for accurate predictive tools for viral mutations to get ahead of any virus and stop the spread before mutation.
 
 **Functionality**
 
