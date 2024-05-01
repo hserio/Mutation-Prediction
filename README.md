@@ -14,7 +14,6 @@ Data Retrieval: Easily downloads from the National Center for Biotechnology Info
 Linux, Python 3.12
 
 **Dependencies**
-
 Biopython, seaborn, matplotlib, scipy, numpy, sys, csv, re, math, datetime, os
 
 **Installation**
@@ -25,7 +24,6 @@ Biopython, seaborn, matplotlib, scipy, numpy, sys, csv, re, math, datetime, os
 
          cd Mutation-Prediction
 
-         pip install seaborn re pandas scipy
 
 **Usage**
 
